@@ -8,18 +8,21 @@ from mcbiomes import genLayer as gl
 app = FastAPI()
 
 
-@app.get("/{seed}/{x}/{z}.jpg")
-def tile(seed: int, x: int, z: int):
+@app.get("/{seed}/{zoom}/{x}/{z}.jpg")
+def tile(seed: int, zoom: int, x: int, z: int):
     layer = gl.genlayer(seed)
+    if zoom > 16:
+        zoom = 16
+    scale = 16 * zoom
     image = gl.getImage(
         layer.getInts(
-            int(x / 16),
-            int(z / 16),
-            16,
-            16,
+            int((x / scale) * scale),
+            int((z / scale) * scale),
+            scale,
+            scale,
         ),
-        16,
-        16,
+        scale,
+        scale,
     )
     buffer = BytesIO()
     image.save(buffer, "jpeg")
