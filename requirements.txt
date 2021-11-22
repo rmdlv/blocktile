@@ -1,3 +1,4 @@
 fastapi
 uvicorn
 https://github.com/vyakl110011/MCBiomes/archive/refs/heads/master.zip
+https://github.com/MostAwesomeDude/java-random/archive/refs/heads/master.zip
