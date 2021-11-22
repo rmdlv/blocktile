@@ -8,7 +8,7 @@ from mcbiomes import genLayer as gl
 app = FastAPI()
 
 
-@app.get("/{seed}//{x}/{z}.jpg")
+@app.get("/{seed}/{x}/{z}.jpg")
 def tile(seed: int, x: int, z: int):
     layer = gl.genlayer(seed)
     image = gl.getImage(
