@@ -16,8 +16,8 @@ def tile(seed: int, zoom: int, x: int, z: int):
     scale = 16 * zoom
     image = gl.getImage(
         layer.getInts(
-            int((x / scale) * scale),
-            int((z / scale) * scale),
+            int(x / scale) * scale,
+            int(z / scale) * scale,
             scale,
             scale,
         ),
