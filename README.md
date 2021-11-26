@@ -8,4 +8,4 @@ https://blocktile.herokuapp.com/{seed}/{zoom}/{col}/{row}.png
 ```
 - **seed** - Random seed of the world
 - **zoom** - Count of rendered chunks
-- **col**, **row** - Tile numbers, calculating by multiply chunk number on zoom value
+- **col**, **row** - Tile numbers, calculated by multiply chunk number on zoom value
