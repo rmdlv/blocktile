@@ -7,5 +7,5 @@
 https://blocktile.herokuapp.com/{seed}/{zoom}/{col}/{row}.png
 ```
 - **seed** - Random seed of the world
-- **zoom** - Scale of rendered chunks
+- **zoom** - Scale of rendered chunks from 0 to 15
 - **col**, **row** - Tile numbers, calculated by multiply chunk number on zoom value
