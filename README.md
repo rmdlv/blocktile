@@ -1,7 +1,6 @@
-
 <p  align="center"><a  href="https://github.com/rmdlv/blocktile"><img  src="https://i.imgur.com/2ehoNgV.png"  width="200px"  style="display: inline-block; border-radius: 5px"></a></p>
 
-# Blocktile
+<h1  align="center">Blocktile</h1>
 
 > Minecraft biome tile server writing on Python using FastAPI
 
