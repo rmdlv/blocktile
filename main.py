@@ -13,9 +13,9 @@ app = FastAPI()
 @app.get("/{seed}/{zoom}/{x}/{z}.png")
 async def tile(seed: int, zoom: int, x: int, z: int):
     layer = gl.genlayer(seed)
-    zoom = 1 if zoom < 1 else zoom
-    zoom = 16 if zoom > 16 else zoom
-    scale = 16 * zoom
+    zoom = 0 if zoom < 0 else zoom
+    zoom = 15 if zoom > 15 else zoom
+    scale = 16 * (16 - zoom)
     chunk = layer.getInts(x * scale, z * scale, scale, scale)
     image = gl.getImage(chunk, scale, scale).resize((256, 256), BOX)
     buffer = BytesIO()
