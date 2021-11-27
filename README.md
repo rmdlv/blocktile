@@ -9,3 +9,8 @@ https://blocktile.herokuapp.com/{seed}/{zoom}/{col}/{row}.png
 - **seed** - Random seed of the world
 - **zoom** - Scale of rendered chunks from 0 to 4
 - **col**, **row** - Tile numbers
+## Deploy with Docker
+```bash
+docker build -t blocktile .
+docker run -p 80:80 blocktile
+```
