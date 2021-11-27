@@ -1,3 +1,2 @@
-fastapi
-uvicorn
+fastapi[uvicorn]
 https://github.com/vyakl110011/MCBiomes/archive/refs/heads/master.zip
