@@ -15,7 +15,7 @@ async def tile(seed: int, zoom: int, x: int, z: int):
     layer = gl.genlayer(seed)
     zoom = 0 if zoom < 0 else zoom
     zoom = 2 if zoom > 2 else zoom
-    scale = 16 * (17 - zoom * (10 - zoom * 2))
+    scale = 16 * (16 - zoom * (10 - zoom * 2))
     chunk = layer.getInts(x * scale, z * scale, scale, scale)
     image = gl.getImage(chunk, scale, scale).resize((256, 256), BOX)
     buffer = BytesIO()
