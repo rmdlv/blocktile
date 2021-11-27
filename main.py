@@ -1,12 +1,10 @@
 from fastapi import FastAPI
 from fastapi.responses import StreamingResponse
-
 from io import BytesIO
 
 from mcbiomes import genLayer as gl
 
 from constants import ZOOM
-
 from PIL.Image import BOX
 
 app = FastAPI()
