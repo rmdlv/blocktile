@@ -4,7 +4,7 @@ from io import BytesIO
 
 from mcbiomes import genLayer as gl
 
-from constants import ZOOM
+from src.constants import ZOOM
 from PIL.Image import BOX
 
 app = FastAPI()
