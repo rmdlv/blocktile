@@ -4,7 +4,6 @@ from io import BytesIO
 
 from mcbiomes import genLayer as gl
 
-from src.constants import ZOOM
 from PIL.Image import BOX
 
 app = FastAPI()
@@ -15,7 +14,7 @@ async def tile(seed: int, zoom: int, x: int, z: int):
     layer = gl.genlayer(seed)
     zoom = 0 if zoom < 0 else zoom
     zoom = 4 if zoom > 4 else zoom
-    scale = 16 * (17 - ZOOM[zoom])
+    scale = int(256 / 2 ** zoom)
     chunk = layer.getInts(x * scale, z * scale, scale, scale)
     image = gl.getImage(chunk, scale, scale).resize((256, 256), BOX)
     buffer = BytesIO()
