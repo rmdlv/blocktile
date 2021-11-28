@@ -4,7 +4,7 @@
 > Minecraft biome tile server writing on Python using FastAPI
 ## Usage
 ```
-https://blocktile.herokuapp.com/{seed}/{zoom}/{col}/{row}.png
+https://blocktile.herokuapp.com/overworld/{seed}/{zoom}/{col}/{row}.png
 ```
 - **seed** - Random seed of the world
 - **zoom** - Scale of rendered chunks from 0 to 4

@@ -9,8 +9,8 @@ from PIL.Image import BOX
 app = FastAPI()
 
 
-@app.get("/{seed}/{zoom}/{x}/{z}.png")
-async def tile(seed: int, zoom: int, x: int, z: int):
+@app.get("/overworld/{seed}/{zoom}/{x}/{z}.png")
+async def overworld(seed: int, zoom: int, x: int, z: int):
     layer = gl.genlayer(seed)
     zoom = 0 if zoom < 0 else zoom
     zoom = 4 if zoom > 4 else zoom
